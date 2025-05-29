@@ -41,6 +41,12 @@
             include $pagina;
         ?>
     </main>
+    <footer class="site-footer ">
+        <div class="container text-center py-4">
+            <p>&copy; 2025 Tattos da Luiza. Todos os direitos reservados.</p>
+            <p>Desenvolvido por [Arthur Oliveira Iori]</p>
+        </div>
+    </footer>
 </body>
 
 </html>
