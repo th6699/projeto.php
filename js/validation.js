@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
 
             const name = document.getElementById('name');
+            const phone = document.getElementById('phone');
+            const datanascimento = document.getElementById('datanascimento');
+            const NosEncontrouPorOn = document.getElementById('NosEncontrouPorOn');
             const email = document.getElementById('email');
             const message = document.getElementById('message');
 
@@ -16,6 +19,32 @@ document.addEventListener('DOMContentLoaded', function () {
             // Name validation
             if (name.value.trim().length < 2) {
                 showError(name, 'Nome deve ter pelo menos 2 caracteres');
+                isValid = false;
+            }
+
+            // Phone validation
+            const phoneRegex = /^\(?[1-9]{2}\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$/;
+            if (!phoneRegex.test(phone.value.trim())) {
+                showError(phone, 'Por favor, insira um telefone válido (ex: (11) 98765-4321)');
+                isValid = false;
+            }
+
+            // Data de nascimento validation
+            const hoje = new Date();
+            const dataNasc = new Date(datanascimento.value);
+            const idade = hoje.getFullYear() - dataNasc.getFullYear();
+
+            if (!datanascimento.value) {
+                showError(datanascimento, 'Por favor, insira sua data de nascimento');
+                isValid = false;
+            } else if (idade < 18 || idade > 100 || isNaN(idade)) {
+                showError(datanascimento, 'Você deve ter entre 18 e 100 anos');
+                isValid = false;
+            }
+
+            // Como nos encontrou validation
+            if (!NosEncontrouPorOn.value || NosEncontrouPorOn.value === "Selecione uma opção") {
+                showError(NosEncontrouPorOn, 'Por favor, selecione como nos encontrou');
                 isValid = false;
             }
 

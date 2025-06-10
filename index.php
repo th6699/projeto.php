@@ -4,38 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tattos da luiza</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <meta name="description" content="Tattos da Luiza - Estúdio de tatuagem profissional">
+    <meta name="theme-color" content="#59412b">
+    <title>Tattos da Luiza</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS personalizado -->
     <link rel="stylesheet" href="CSS/style.css">
-
 </head>
 
 <body>
-    <header class="site-header" align="center">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="index.php?param=home">
+                <a class="navbar-brand" href="?param=home">
                     <img src="imgs/1.png" alt="Aziul Tattoo" class="i">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="home">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="galeria">Galeria</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contato">Contato</a></li>
-                        <li class="nav-item"><a class="nav-link" href="SobreNos">Sobre nós</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?param=home">
+                                <i class="fas fa-home"></i> Início
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?param=galeria">
+                                <i class="fas fa-images"></i> Galeria
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?param=contato">
+                                <i class="fas fa-envelope"></i> Contato
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?param=SobreNos">
+                                <i class="fas fa-info-circle"></i> Sobre nós
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="container">
+
+    <main class="container my-4">
         <?php
         $pagina = $_GET['param'] ?? 'home';
-
-        //$pagina = pagina que se deseja abrir
         $pagina = "paginas/{$pagina}.php";
 
         if (file_exists($pagina)) {
@@ -44,17 +64,27 @@
             include 'paginas/erro.php';
         }
         ?>
-
     </main>
-    <footer class="site-footer p-1">
-        <div class="container text-center py-4">
-            <p>&copy; 2025 Tattos da Luiza. Todos os direitos reservados.</p>
-            <p>Desenvolvido por [Arthur Oliveira Iori]</p>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Tattos da Luiza. Todos os direitos reservados.</p>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <p class="mb-0 text-muted">Desenvolvido por Arthur Oliveira Iori</p>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 
 </html>
