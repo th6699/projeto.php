@@ -1,10 +1,15 @@
 <div class="header-hero mb-4">
     <div class="row align-items-center">
         <div class="col-12 text-center">
-            <h1 class="display-4 fw-bold mb-3">Bem-vindo à Tattos da Luiza</h1>
+            <h1 class="display-4 fw-bold mb-3">Bem-vindo à...</h1>
+
+            <div class="logo-container mb-4">
+                <img src="imgs/1.png" alt="Aziul Studio Tattoo" class="img-fluid logo-img">
+            </div>
+
             <p class="lead fs-5 mb-4">Arte única e personalizada para sua história</p>
-            <div class="header-buttons">
-                <a href="?param=galeria" class="btn btn-lg btn-primary me-3">
+            <div class="header-buttons d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+                <a href="?param=galeria" class="btn btn-lg btn-primary">
                     <i class="fas fa-images me-2"></i>Ver Galeria
                 </a>
                 <a href="?param=contato" class="btn btn-lg btn-outline-primary">
@@ -41,6 +46,20 @@
 
     .header-buttons .btn {
         min-width: 180px;
+        background-color: #59412b;
+        border-color: #59412b;
+        color: #ecdcc4;
+    }
+
+    .header-buttons .btn-outline-primary {
+        background-color: transparent;
+        border-color: #59412b;
+        color: #59412b;
+    }
+
+    .header-buttons .btn-outline-primary:hover {
+        background-color: #59412b;
+        color: #ecdcc4;
     }
 
     .header-buttons .btn i {
@@ -56,17 +75,25 @@
             font-size: 2rem;
         }
 
+        .header-buttons {
+            width: 100%;
+            max-width: 300px;
+            margin: 1.8rem auto 0;
+        }
+
         .header-buttons .btn {
-            min-width: auto;
-            display: block;
-            margin: 0.5rem auto;
-            width: 80%;
+            width: 100%;
+        }
+
+        .logo-container {
+            max-width: 200px;
+            padding: 0.5rem;
         }
     }
 
     /* Card de características */
     .card {
-        background-color: #ecdcc4;
+        background-color: #ecdcc4 !important;
         border: 1px solid #b2875f;
         border-radius: 12px;
         box-shadow: 0 2px 4px rgba(89, 65, 43, 0.1);
@@ -104,11 +131,31 @@
         margin-bottom: 0;
     }
 
+    .text-primary {
+        color: #59412b !important;
+    }
+
     @media (max-width: 768px) {
         .feature-card {
             padding: 1rem;
             margin-bottom: 1rem;
         }
+    }
+
+    .logo-container {
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .logo-img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .logo-img:hover {
+        transform: scale(1.05);
     }
 </style>
 

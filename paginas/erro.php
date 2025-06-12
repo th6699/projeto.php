@@ -20,19 +20,19 @@
 <style>
     .error-page {
         padding: 2rem;
-        background-color: white;
+        background-color: #ecdcc4;
         border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgba(89, 65, 43, 0.1);
     }
 
     .error-page .display-1 {
         font-size: 6rem;
         font-weight: bold;
-        color: #b2875f;
+        color: #59412b;
     }
 
     .error-page h2 {
-        color: #b2875f;
+        color: #59412b;
     }
 
     .error-page .lead {

@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="?param=home">
-                    <img src="imgs/1.png" alt="Aziul Tattoo" class="i">
+                    <img src="imgs/1.png" alt="Aziul Tattoo" class="img-fluid" width="134" height="38" style="margin: 0; border: 0;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -65,22 +65,13 @@
         }
         ?>
     </main>
-
     <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2025 Tattos da Luiza. Todos os direitos reservados.</p>
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-12">
-                    <p class="mb-0 text-muted">Desenvolvido por Arthur Oliveira Iori</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+                    <div class="col-md-6 text-center text-white mt-2 mb-0 p-0 ">
+                        <p class="mb-0" style="margin: 0; padding: 0;">&copy; 2025 Tattos da Luiza. Todos os direitos reservados.</p>
+                    </div>
 
+
+        </footer>
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
